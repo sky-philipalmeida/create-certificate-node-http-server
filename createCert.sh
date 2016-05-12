@@ -50,3 +50,7 @@ rsync -a all/my-private-root-ca.cert.pem client/
 
 # create DER format crt for iOS Mobile Safari, etc
 openssl x509 -outform der -in all/my-private-root-ca.cert.pem -out client/my-private-root-ca.crt
+
+#Copy certificates to current folder
+cp server/privkey.pem server.key
+cp server/cert.pem server.crt
